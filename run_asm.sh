@@ -23,7 +23,8 @@ cleanup() {
     echo "Cleaning up..."
     rm -f "$TASM_DIR/$asm_file_name" \
           "$TASM_DIR/$base_name_upper.MAP" \
-          "$TASM_DIR/$base_name_upper.OBJ"
+          "$TASM_DIR/$base_name_upper.OBJ" \
+	  "$base_name.exe"
 }
 
 if command -v dosbox-staging &> /dev/null; then
@@ -85,7 +86,7 @@ fi
 
 cp "$input_file" "$TASM_DIR/$asm_file_name"
 
-"$DOSBOX_BIN" -conf "$DOSBOX_CONF"
+"$DOSBOX_BIN" --noprimaryconf -conf "$DOSBOX_CONF"
 
 if [ -f "$TASM_DIR/$base_name_upper.EXE" ]; then
     mv "$TASM_DIR/$base_name_upper.EXE" "$(dirname "$input_file")/$base_name.exe"
