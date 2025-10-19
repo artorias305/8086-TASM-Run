@@ -23,8 +23,8 @@ cleanup() {
     echo "Cleaning up..."
     rm -f "$TASM_DIR/$asm_file_name" \
           "$TASM_DIR/$base_name_upper.MAP" \
-          "$TASM_DIR/$base_name_upper.OBJ" \
-	  "$base_name.exe"
+          "$TASM_DIR/$base_name_upper.OBJ"
+    find . -type f -name "$base_name.exe" -delete
 }
 
 if command -v dosbox-staging &> /dev/null; then
