@@ -16,10 +16,6 @@ For example, from within the project directory:
 ./run_asm.sh test.asm
 ```
 
-**Output:**
-
-The script will create the final `.exe` file in the same directory as your source `.asm` file.
-
 **Options:**
 
 * `-d`: Enable debug mode (runs Turbo Debugger `TD.EXE` after assembly and linking).
@@ -35,5 +31,5 @@ This script automates the repetitive process of mounting, assembling, linking, a
 
 ## Requirements
 
-*   **DOSBox** or **DOSBox Staging**: The script will automatically detect which one you have installed. `dosbox-staging` is recommended.
+*   **DOSBox Staging**: The modern continuation of DOSBox, might work on default DOSBox but i havent tested it, might require some changes on the script.
 *   **TASM**: `TASM.EXE`, `TLINK.EXE`, and optionally `TD.EXE` must be placed in the `TASM` directory. This project does not include them due to licensing restrictions, but they can be found online.
